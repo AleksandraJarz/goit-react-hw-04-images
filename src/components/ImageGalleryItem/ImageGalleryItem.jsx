@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './ImageGalleryItem.css';
+
 const ImageGalleryItem = ({ prewImgUrl, largeImgUrl, tags, handleClick }) => {
   return (
     <li className="imageGalleryItem" onClick={() => handleClick(largeImgUrl)}>
