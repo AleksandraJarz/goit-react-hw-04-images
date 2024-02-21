@@ -68,14 +68,16 @@ export default function App() {
     if (searchQuery) {
       getImages();
     }
-  });
+    //eslint-disable-next-line
+  }, [searchQuery, activePage]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  });
+    //eslint-disable-next-line
+  }, []);
 
   const getImages = async () => {
     setIsLoading(true);
